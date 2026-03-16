@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hillary Lash Design</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background-color:#fffafc;
+    color:#444;
+}
+
+header{
+    background:linear-gradient(to right,#f8e8ee,#f3d5e0);
+    padding:80px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-family:'Playfair Display', serif;
+    font-size:42px;
+    color:#6d4c57;
+}
+
+header p{
+    margin-top:15px;
+    font-size:18px;
+}
+
+.header-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.header-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:25px;
+    border:6px solid #fff;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.header-img:hover{
+    transform:scale(1.05);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background-color:#b5838d;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background-color:#a06c75;
+}
+
+section{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.section-make{
+    padding:70px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+section h2{
+    font-family:'Playfair Display', serif;
+    margin-bottom:40px;
+    font-size:32px;
+    color:#6d4c57;
+}
+
+.servicos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+    padding: 10px;
+}
+
+.card{
+    background:#fff;
+    width:280px;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#b5838d;
+}
+
+.card-make img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:15px;
+    padding: 10px;
+}
+
+.card-make{
+    background:#fff;
+    width:500px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card-make:hover{
+    transform:translateY(-8px);
+}
+
+.card-make h3{
+    margin-bottom:10px;
+    color:#b5838d;
+}
+
+.carousel{
+    position:relative;
+    width:100%;
+    height:300px; /* maior e proporcional */
+    margin:25px 0;
+    overflow:hidden;
+    border-radius:18px;
+}
+
+.carousel-images img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
+}
+
+.carousel-images img.active{
+    display:block;
+}
+
+.carousel button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,0.5);
+    border:none;
+    font-size:18px;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    backdrop-filter:blur(4px);
+    transition:0.3s;
+}
+
+.carousel button:hover{
+    background:rgba(255,255,255,0.8);
+}
+
+.prev{
+    left:8px;
+}
+
+.next{
+    right:8px;
+}
+
+.sobre{
+    max-width:800px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.contato{
+    background-color:#f8e8ee;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float img {
+    width: 32px;
+    height: 32px;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 12px 30px rgba(211, 37, 182, 0.6);
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(223, 75, 198, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+footer{
+    padding:20px;
+    text-align:center;
+    background:#f3d5e0;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="img/hillary.jpeg" alt="Hillary Lash Designer" class="header-img">
+
+        <h1>Hillary Lash Design</h1>
+        <p>Realçando sua beleza com delicadeza e perfeição</p>
+
+        <a href="https://wa.me/5513991635782?text=Olá, gostaria de agendar um horário!." 
+        class="btn" target="_blank">
+        Agende seu horário
+        </a>
+    </div>
+</header>
+
+<section>
+    <h2>Meus Serviços</h2>
+    <div class="servicos">
+        <div class="card">
+            <h3>Volume Brasileiro</h3>
+            <p>Um olhar natural e sofisticado.</p>
+            <img src="img/foto.jpg" alt="Brasileiro">
+        </div>
+
+        <div class="card">
+            <h3>Mega Brasileiro</h3>
+            <p>Mais volume e intensidade para um olhar marcante.</p>
+            <img src="img/megabr.jpg" alt="Mega Brasileiro">
+        </div>
+
+        <div class="card">
+            <h3>Mega Luxo</h3>
+            <p>Reposição dos fios para manter seu olhar impecável.</p>
+            <img src="img/luxo.jpg" alt="Mega Luxo">
+        </div>
+    </div>
+</section>
+<section>
+<div class="servicos">
+        <div class="card">
+            <h3>Design personalizado premium</h3>
+            <img src="img/desing.jpg" alt="Design com henna">
+        </div>
+
+        <div class="card">
+            <h3>Design personalizado com henna</h3>
+            <img src="img/henna.jpg" alt="Design com henna">
+        </div>
+
+    </div>
+</section>
+
+<section class="section-make">
+    <div class="card-make">
+    <h3>Maquiagens Simples e Elaboradas</h3>
+    <p>Maquiagens delicadas e elaboradas para realçar ainda mais sua beleza.</p>
+
+    <div class="carousel">
+        <button class="prev">&#10094;</button>
+
+        <div class="carousel-images">
+            <img src="img/make1.jpg" class="active">
+            <img src="img/make2.jpg">
+            <img src="img/make3.jpg">
+            <img src="img/make4.jpg">
+        </div>
+
+        <button class="next">&#10095;</button>
+    </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Sobre Mim</h2>
+    <div class="sobre">
+        <p>Sou lash designer especializada em técnicas modernas de extensão de cílios, Desing de sobrancelha e Maquiagens. Meu objetivo é proporcionar autoestima, elegância e bem-estar para cada cliente, com atendimento personalizado e ambiente acolhedor.</p>
+    </div>
+</section>
+
+<section id="contato" class="contato">
+    <h2>Lash de Sucesso!</h2>
+    <p>Entre em contato para mais informações sobre o meu curso e para especialiizar os seus atendimentos !.</p>
+    <a href="https://wa.me/5513991635782?text=Olá, gostaria de saber mais sobre o curso, Lash de Sucesso!." class="btn" target="_blank">Dar o próximo passo.</a>
+</section>
+
+<a href="https://wa.me/5513991635782?text=Olá, gostaria de agendar um horário!." 
+        class="whatsapp-float" 
+        target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="35">
+</a>
+
+<footer>
+    © 2026 • Hillary Lash Design
+</footer>
+
+<script>
+const carousels = document.querySelectorAll(".carousel");
+
+carousels.forEach(carousel => {
+    const images = carousel.querySelectorAll("img");
+    const prevBtn = carousel.querySelector(".prev");
+    const nextBtn = carousel.querySelector(".next");
+
+    let index = 0;
+
+    function showImage(i){
+        images.forEach(img => img.classList.remove("active"));
+        images[i].classList.add("active");
+    }
+
+    nextBtn.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        showImage(index);
+    });
+
+    prevBtn.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        showImage(index);
+    });
+
+    // autoplay
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        showImage(index);
+    }, 4000);
+});
+</script>
+
+</body>
+</html>
